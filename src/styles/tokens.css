@@ -1,0 +1,105 @@
+
+
+:root{
+
+    /*  BOJE
+       PRAVILO 1: --gold se koristi za dugmad koja vode
+                  ka rezervaciji. Nigdje drugo. Nikad kao ukras.
+       PRAVILO 2: --pine se koristi u sekciji o
+                  elektrifikaciji. Zeleno na sajtu znači "električno".
+       */
+
+    /* tamne površine — Jadran i norveška zimska voda */
+    --ink:      #08252F;   /* glavna tamna pozadina, glavni tekst */
+    --ink-2:    #0E3441;   /* kartice i forme na tamnom */
+    --ink-3:    #17505E;   /* voda u ilustracijama */
+    --ink-deep: #061C25;   /* futer */
+
+    /* svijetle površine — krečnjak */
+    --stone:    #E7EAE3;   /* glavna svijetla pozadina */
+    --paper:    #F3F5EF;   /* alternativna sekcija, kartice */
+    --white:    #FFFFFF;
+
+    /* akcenti */
+    --sea:      #2E7C86;   /* nadnaslovi, linkovi, sitni akcenti */
+    --gold:     #C4922E;   /* SAMO dugmad za rezervaciju */
+    --gold-hi:  #DEAE4D;   /* hover zlatnog, nadnaslovi na tamnom */
+    --pine:     #2F6B47;   /* SAMO sekcija o elektrifikaciji */
+    --sage:     #DEE7DA;   /* pozadina sekcije o elektrifikaciji */
+
+    /* tekst */
+    --on-ink:       #DCE5E1;  /* tekst na tamnoj pozadini */
+    --on-ink-mute:  #8CA6A9;  /* sporedni tekst na tamnoj */
+    --on-stone-mute: rgba(8,37,47,.72);  /* sporedni tekst na svijetloj */
+
+    /* linije — uvijek prozirne, da rade na svakoj pozadini */
+    --line:      rgba(8,37,47,.15);
+    --line-soft: rgba(8,37,47,.08);
+    --line-ink:  rgba(220,229,225,.16);
+
+    /* stanja */
+    --error:   #A4342A;
+    --success: #2F6B47;
+
+    /*  TIPOGRAFIJA
+       IBM Plex je izabran jer pokriva latinicu, proširenu latinicu
+       (š č ć ž đ) I ćirilicu u sva tri stila. sajt ima četiri jezika.
+       */
+    --sans:  "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    --serif: "IBM Plex Serif", Georgia, serif;
+    --mono:  "IBM Plex Mono", ui-monospace, monospace;
+
+    /* skala — clamp() znači da se sama prilagođava ekranu */
+    --t-hero:    clamp(2.5rem, 6.6vw, 4.7rem);   /* h1, sans 700 */
+    --t-h2:      clamp(1.85rem, 3.7vw, 2.85rem); /* sans 600 */
+    --t-h3:      1.0625rem;                       /* 17px sans 600 */
+    --t-lede:    1.125rem;                        /* 18px serif 300 */
+    --t-body:    1.0625rem;                       /* 17px serif 300 */
+    --t-small:   0.9375rem;                       /* 15px */
+    --t-label:   0.6875rem;                       /* 11px mono */
+    --t-micro:   0.59375rem;                      /* 9.5px mono */
+
+    --lh-tight: .98;   /* naslovi */
+    --lh-head:  1.06;  /* h2 */
+    --lh-body:  1.6;   /* tekst */
+
+    --ls-hero:  -.04em;
+    --ls-head:  -.025em;
+    --ls-label: .2em;   /* mono verzali */
+
+    /*  RAZMACI */
+    --sp-1: 4px;   --sp-2: 8px;   --sp-3: 12px;  --sp-4: 16px;
+    --sp-5: 24px;  --sp-6: 32px;  --sp-7: 48px;  --sp-8: 64px;
+    --sp-9: 96px;  --sp-10: 128px;
+
+    --section-y: clamp(76px, 9vw, 116px);  /* vertikalni razmak sekcije */
+    --wrap:      1220px;                   /* maksimalna širina sadržaja */
+    --gutter:    30px;                     /* bočni razmak, desktop */
+    --gutter-sm: 20px;                     /* bočni razmak, mobilni */
+
+    /* ── OSTALO  */
+    --radius: 0;              /* bez zaobljenja — namjerno */
+    --radius-sm: 3px;         /* samo sitni elementi, npr. MNE tablica */
+    --shadow: 0 20px 46px rgba(8,37,47,.22);
+    --shadow-card: 0 14px 30px rgba(8,37,47,.09);
+
+    --ease: cubic-bezier(.16,.84,.3,1);
+    --dur-fast: .2s;
+    --dur: .6s;
+    --dur-slow: 2.8s;         /* iscrtavanje serpentine */
+}
+
+/* PRELOMNE TAČKE
+
+     640px   telefon
+     1000px  tablet
+     1220px  puna širina sadržaja
+    */
+
+@media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
+    }
+}

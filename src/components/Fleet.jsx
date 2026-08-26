@@ -8,9 +8,17 @@ const Fleet = () => {
 
         <section className={styles.fleet}>
             <div className="shell">
-                <p className="eyebrow">Our fleet</p>
-                <h2 className="h2">Chosen for these roads</h2>
-                <p className="lede">Small, economical and suited to the driving here: narrow old-town lanes on the coast, long climbs inland.</p>
+
+                <div className={styles.head}>
+                    <div >
+                        <p className="eyebrow">Our fleet</p>
+                        <h2 className="h2">Our cars. <br/> Made for these roads.</h2>
+                    </div>
+                    <p className="lede"  style={{ margin: 0 }}>Small, economical and suited to the driving here: narrow old-town lanes on the coast, long climbs inland.</p>
+                </div>
+
+
+
 
 
                 <FleetGrid/>

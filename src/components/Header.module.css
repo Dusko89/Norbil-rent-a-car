@@ -57,6 +57,9 @@
     color: var(--gold-hi);
     padding: 3px 4px;
     line-height: 1;
+    background: #C8102E;
+    border-color: #C8102E;
+    color: var(--gold-hi);
 }
 
 .word {

@@ -4,9 +4,13 @@
 
     /*  BOJE
        PRAVILO 1: --gold se koristi za dugmad koja vode
-                  ka rezervaciji. Nigdje drugo. Nikad kao ukras.
+                  ka rezervaciji.
+                   --gold  Montenegrin flag border. Used ONLY on booking actions.
+                   Nigdje drugo. Nikad kao ukras.
        PRAVILO 2: --pine se koristi u sekciji o
                   elektrifikaciji. Zeleno na sajtu znači "električno".
+
+                  --plate Registration plate red. Used ONLY on the brand mark.
        */
 
     /* tamne površine — Jadran i norveška zimska voda */
@@ -24,6 +28,7 @@
     --sea:      #2E7C86;   /* nadnaslovi, linkovi, sitni akcenti */
     --gold:     #C4922E;   /* SAMO dugmad za rezervaciju */
     --gold-hi:  #DEAE4D;   /* hover zlatnog, nadnaslovi na tamnom */
+    --plate:    #C8102E;   /* za CG zastavu */
     --pine:     #2F6B47;   /* SAMO sekcija o elektrifikaciji */
     --sage:     #DEE7DA;   /* pozadina sekcije o elektrifikaciji */
 

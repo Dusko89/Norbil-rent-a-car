@@ -3,14 +3,15 @@ import FleetGrid from "./FleetGrid.jsx";
 import styles from "./Fleet.module.css"
 
 
-
 const Fleet = () => {
     return(
-        <section className="styles.fleet">
+
+        <section className={styles.fleet}>
             <div className="shell">
                 <p className="eyebrow">Our fleet</p>
                 <h2 className="h2">Chosen for these roads</h2>
                 <p className="lede">Small, economical and suited to the driving here: narrow old-town lanes on the coast, long climbs inland.</p>
+
 
                 <FleetGrid/>
 

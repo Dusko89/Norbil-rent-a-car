@@ -55,3 +55,23 @@ a {
     color: rgba(8,37,47,.72);
     margin: 18px 0 0;
 }
+
+.gold-btn {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    background: var(--gold);
+    color: #1C1406;
+    border: 0;
+    padding: 15px 24px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background .2s, transform .2s;
+}
+
+.gold-btn:hover {
+    background: var(--gold-hi);
+    transform: translateY(-1px);
+}

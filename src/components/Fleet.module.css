@@ -1,0 +1,32 @@
+
+
+.fleet {
+    background: var(--paper);
+    padding: clamp(76px, 9vw, 116px) 0;
+}
+
+.partner {
+    margin-top: 20px;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.partnerLabel {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--sea);
+    padding-top: 4px;
+}
+
+.partner p {
+    margin: 0;
+    font-size: 16px;
+    color: rgba(8,37,47,.75);
+    max-width: 66ch;
+}

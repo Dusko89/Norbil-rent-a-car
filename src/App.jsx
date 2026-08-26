@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import './styles/tokens.css'
-import FleetGrid from "./components/FleetGrid.jsx";
+import Fleet from "./components/Fleet.jsx";
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <div className="shell">
-          <FleetGrid/>
+          <Fleet/>
       </div>
 
 

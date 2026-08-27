@@ -61,3 +61,28 @@
     text-transform: uppercase;
     color: var(--on-ink-mute);
 }
+
+.in h1 em {
+    display: block;
+    font-style: normal;
+    overflow: hidden;
+    padding-bottom: .12em;
+    margin-bottom: -.12em;
+}
+
+.in h1 em:nth-child(2) b {
+    animation-delay: .1s;
+    color: var(--gold-hi);
+}
+
+.in h1 em b {
+    display: block;
+    font-weight: 700;
+    transform: translateY(103%);
+    animation: rise .9s cubic-bezier(.16,.84,.3,1) forwards;
+
+}
+
+@keyframes rise{
+to { transform: translateY(0);
+}}

@@ -86,3 +86,27 @@
 @keyframes rise{
 to { transform: translateY(0);
 }}
+
+.photo {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 70% 50%;
+    display: block;
+}
+
+.photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+            linear-gradient(90deg, rgba(6,28,37,.94) 0%, rgba(6,28,37,.8) 36%, rgba(6,28,37,.28) 70%, rgba(6,28,37,.5) 100%),
+            linear-gradient(0deg, rgba(6,28,37,.9) 0%, rgba(6,28,37,0) 42%);
+}

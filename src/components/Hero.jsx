@@ -5,6 +5,11 @@ import styles from "./Hero.module.css"
 const Hero = () => {
     return (
         <section className={styles.hero}>
+            <picture className={styles.photo}>
+                <source media="(max-width:640px)" srcSet="/images/hero-mobile.webp" type="image/webp" />
+                <source srcSet="/images/hero-img.webp" type="image/webp" />
+                <img src="/images/hero-img.jpg" alt="" />
+            </picture>
           <div className="shell">
               <div className={styles.in}>
                   <p className={styles.tagline}>Norsk bil. Crnogorski put.</p>

@@ -110,3 +110,12 @@ to { transform: translateY(0);
             linear-gradient(90deg, rgba(6,28,37,.94) 0%, rgba(6,28,37,.8) 36%, rgba(6,28,37,.28) 70%, rgba(6,28,37,.5) 100%),
             linear-gradient(0deg, rgba(6,28,37,.9) 0%, rgba(6,28,37,0) 42%);
 }
+
+@media (max-width: 640px) {
+    .photo img { object-position: 64% 46%; }
+    .photo::after {
+        background: linear-gradient(0deg, rgba(6,28,37,.95) 6%, rgba(6,28,37,.78) 46%, rgba(6,28,37,.55) 100%);
+
+    }
+}
+

@@ -119,3 +119,9 @@
 @media (max-width: 1000px) {
     .nav { display: none; }
 }
+
+@media (max-width: 640px) {
+    .langs { display: none; }
+    .hdr :global(.shell) { gap: 12px; }
+    .hdr :global(.gold-btn) { padding: 10px 14px; font-size: 10px; }
+}

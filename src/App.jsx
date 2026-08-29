@@ -5,6 +5,7 @@ import Fleet from "./components/Fleet.jsx";
 import Header from "./components/Header.jsx"
 import Hero from "./components/Hero.jsx"
 import Booking from "./components/Booking.jsx"
+import Footer from "./components/Footer.jsx";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Hero/>
           <Booking/>
           <Fleet/>
+          <Footer/>
       </div>
 
 

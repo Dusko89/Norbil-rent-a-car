@@ -6,7 +6,7 @@ import styles from "./Fleet.module.css"
 const Fleet = () => {
     return(
 
-        <section className={styles.fleet}>
+        <section className={styles.fleet} id="fleet">
             <div className="shell">
 
                 <div className={styles.head}>

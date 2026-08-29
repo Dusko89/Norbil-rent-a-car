@@ -1,15 +1,15 @@
 
 import styles from "./Header.module.css";
+import Brand from   "./Brand.jsx"
 
 
 const Header = () => {
+
    return (
+
            <header className={styles.hdr}>
                <div className="shell">
-                   <a className={styles.brand} href="#top">
-                       <span className={styles.plate}>MNE</span>
-                       <span className={styles.word}>NORBIL</span>
-                   </a>
+                   <Brand/>
 
                    <nav className={styles.nav}>
                        <a href="#fleet">Fleet</a>

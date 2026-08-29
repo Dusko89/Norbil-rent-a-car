@@ -28,7 +28,7 @@ const Booking = () => {
         }
 
         if (!collectDate || !returnDate) {
-            setMessage("Choose both date!");
+            setMessage("Choose both dates!");
             return;
         }
 
@@ -37,11 +37,10 @@ const Booking = () => {
             return;
         }
 
-        /*setMessage("Looks good!");*/
 
-        const days = Math.round(new Date(returnDate) - new Date(collectDate)) / 86400000;
-        setMessage(`${days} days from ${locationLabels[location]}. Pick a car bellow.`);
-
+        const days = Math.round((new Date(returnDate) - new Date(collectDate)) / 86400000);
+        setMessage(`${days} days from ${locationLabels[location]}. Pick a car below.`);
+        document.getElementById("fleet").scrollIntoView({behavior: "smooth"});
 
     }
 

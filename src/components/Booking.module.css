@@ -1,0 +1,119 @@
+.book {
+    position: relative;
+    z-index: 20;
+    margin-top: -99px;
+}
+
+.card {
+    background: var(--ink-2);
+    color: var(--on-ink);
+    display: grid;
+    grid-template-columns: 1.35fr 1fr 1fr auto;
+    box-shadow: 0 20px 46px rgba(8,37,47,.22);
+}
+
+.field {
+    padding: 19px 24px;
+    border-right: 1px solid var(--line-ink);
+    min-width: 0;
+}
+
+.field label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: .17em;
+    text-transform: uppercase;
+    color: var(--on-ink-mute);
+    margin-bottom: 8px;
+}
+
+.field select,
+.field input {
+    width: 100%;
+    background: none;
+    border: 0;
+    color: #EDF2EE;
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+}
+
+.field select {
+    appearance: none;
+}
+
+.field option {
+    color: #12262b;
+    background: #fff;
+}
+
+.field input::-webkit-calendar-picker-indicator {
+    filter: invert(.75);
+    cursor: pointer;
+}
+
+.go {
+    display: flex;
+    padding: 11px;
+}
+
+.go button {
+    min-width: 168px;
+    width: 100%;
+}
+
+.msg {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-top: 0;
+    padding: 12px 24px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--sea);
+}
+
+.note {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-top: 16px;
+    padding-left: 2px;
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.75;
+    color: rgba(8,37,47,.6);
+    max-width: 74ch;
+}
+
+.note span:first-child {
+    color: var(--gold);
+    flex-shrink: 0;
+}
+
+@media (max-width: 1000px) {
+    .card {
+        grid-template-columns: 1fr 1fr;
+    }
+    .field:nth-child(1) {
+        grid-column: 1 / -1;
+    }
+    .go {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 640px) {
+    .book {
+        margin-top: -58px;
+    }
+    .card {
+        grid-template-columns: 1fr;
+    }
+    .field {
+        border-right: 0;
+        border-bottom: 1px solid var(--line-ink);
+    }
+}

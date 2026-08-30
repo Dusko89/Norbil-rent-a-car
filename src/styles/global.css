@@ -80,3 +80,7 @@ a {
     background: var(--gold-hi);
     transform: translateY(-1px);
 }
+
+.eyebrow.on-sage { color: var(--pine); }
+.eyebrow.on-dark { color: var(--gold-hi); }
+.lede.on-dark { color: var(--on-ink-mute); }

@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Kotor",
+    "note": "Old town, UNESCO bay",
+    "km": 20,
+    "time": "30 min"
+
+  },
+
+  {
+    "name": "Budva",
+    "note": "Beaches, old town",
+    "km": 20,
+    "time": "25 min"
+
+  },
+
+  {
+    "name": "Sveti Stefan",
+    "note": "The island village",
+    "km": 28,
+    "time": "35 min"
+
+  },
+
+  {
+    "name": "Perast",
+    "note": "Stone town, two islets",
+    "km": 35,
+    "time": "45 min"
+
+  },
+
+  {
+    "name": "Cetinje",
+    "note": "The old royal capital",
+    "km": 50,
+    "time": "1 h"
+
+  },
+
+  {
+    "name": "Lovćen",
+    "note": "Njegoš mausoleum, 461 steps",
+    "km": 62,
+    "time": "1 h 30"
+
+  },
+
+  {
+    "name": "Virpazar",
+    "note": "Skadar lake boats",
+    "km": 65,
+    "time": "1 h 10"
+
+  },
+
+  {
+    "name": "Ostrog",
+    "note": "Monastery in the cliff",
+    "km": 110,
+    "time": "2 h"
+
+  },
+
+  {
+    "name": "Žabljak",
+    "note": "Durmitor, Tara canyon",
+    "km": 170,
+    "time": "3 h"
+
+  }
+]

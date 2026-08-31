@@ -9,6 +9,7 @@ import Footer from "./components/Footer.jsx";
 import Distances from "./components/Distances.jsx";
 import Electric from "./components/Electric.jsx";
 import Standard from "./components/Standard.jsx";
+import Faq from "./components/Faq.jsx"
 
 function App() {
 
@@ -16,13 +17,18 @@ function App() {
   return (
     <>
       <div >
-          <Header />
-          <Hero/>
-          <Booking/>
-          <Distances/>
-          <Fleet/>
-          <Electric/>
-          <Standard/>
+          <Header/>
+
+          <main>
+              <Hero/>
+              <Booking/>
+              <Distances/>
+              <Fleet/>
+              <Electric/>
+              <Standard/>
+              <Faq/>
+          </main>
+
           <Footer/>
       </div>
 

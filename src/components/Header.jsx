@@ -1,9 +1,14 @@
 
 import styles from "./Header.module.css";
-import Brand from   "./Brand.jsx"
+import Brand from   "./Brand.jsx";
+import {useState} from "react";
+
+
 
 
 const Header = () => {
+
+    const [menuOpen, setMenuOpen] = useState(false);
 
    return (
 
@@ -25,8 +30,30 @@ const Header = () => {
                        <button>RU</button>
                    </div>
 
+                   <button className={styles.menuBtn} onClick={() => {setMenuOpen(!menuOpen)}}>Menu</button>
+                       {menuOpen &&
+                           <div className={styles.panel}>
+                               <a href="#fleet">Fleet</a>
+                               <a href="#distances">Distances</a>
+                               <a href="#electric">Electric</a>
+                               <a href="#faq">FAQ</a>
 
-                   <a className="gold-btn" href="#book">Reserve</a>
+                               <div className={styles.panelLangs}>
+                                   <button>ME</button>
+                                   <button>EN</button>
+                                   <button>NO</button>
+                                   <button>RU</button>
+                               </div>
+
+                           </div>
+
+                       }
+
+
+
+
+
+                   <a className="gold-btn" href="#book"> Reserve</a>
 
 
                </div>

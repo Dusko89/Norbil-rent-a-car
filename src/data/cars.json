@@ -62,7 +62,7 @@
     "note": "The comfortable one. Long days on the highway and the climb to Durmitor.",
     "pricePerDay": 42,
     "image": "/images/webp/card/skoda-octavia.webp",
-    "heroImage": "/images/webp/hero/vehicle-hero-04-skoda-octavia-combi-2018.webp"
+    "heroImage": "/images/webp/hero/vehicle-hero-05-skoda-octavia-combi-2018.webp"
   },
   {
     "id": "volkswagen-touran",
@@ -78,6 +78,6 @@
     "note": "Room for the whole family and the luggage that comes with them.",
     "pricePerDay": 45,
     "image": "/images/webp/card/volkswagen-touran.webp",
-    "heroImage": "/images/webp/hero/vehicle-hero-05-volkswagen-touran-2017.webp"
+    "heroImage": "/images/webp/hero/vehicle-hero-04-volkswagen-touran-2017.webp"
   }
 ]

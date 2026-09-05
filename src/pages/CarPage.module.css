@@ -6,7 +6,7 @@
 
 .hero {
     width: 100%;
-    height: clamp(280px, 42vw, 520px);
+    height: clamp(300px, 42vw, 550px);
     overflow: hidden;
     background: var(--ink);
 }

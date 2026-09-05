@@ -1,4 +1,5 @@
 import styles from "./CarCard.module.css";
+import {Link} from "react-router-dom";
 
 
 const typeLabels = { hatchback: "Hatchback", wagon: "Station wagon", mpv: "MPV" };
@@ -9,9 +10,9 @@ const fuelLabels = {petrol: "Petrol", diesel: "Diesel"};
 
 const CarCard = ({ car }) => {
     return (
-        <div className={styles.card}>
+        <Link className={styles.card} to={`/vozila/${car.id}`}>
             <div className={styles.visual}>
-                <img src={car.image} alt={car.name} />
+                <img src={car.image} alt={car.name} loading="lazy" />
             </div>
 
             <div className={styles.body}>
@@ -28,7 +29,7 @@ const CarCard = ({ car }) => {
                     <span><strong>€{car.pricePerDay}</strong> <em>/ day</em></span>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 

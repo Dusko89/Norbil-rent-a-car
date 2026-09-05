@@ -12,7 +12,8 @@
     "ac": true,
     "note": "The narrow one. Old-town lanes, and parking in Budva in August.",
     "pricePerDay": 25,
-    "image": "/images/placeholder.svg"
+    "image": "/images/webp/card/volkswagen-up.webp",
+    "heroImage": "/images/webp/hero/vehicle-hero-01-volkswagen-up-2013.webp"
   },
   {
     "id": "renault-clio",
@@ -27,7 +28,9 @@
     "ac": true,
     "note": "Cheapest to run. A fortnight on the coast without watching the fuel gauge.",
     "pricePerDay": 30,
-    "image": "/images/placeholder.svg"
+    "image": "/images/webp/card/renault-clio.webp",
+    "heroImage": "/images/webp/hero/vehicle-hero-02-renault-clio-2018.webp"
+
   },
   {
     "id": "skoda-fabia",
@@ -42,7 +45,8 @@
     "ac": true,
     "note": "Small enough for the coast, and it swallows luggage.",
     "pricePerDay": 34,
-    "image": "/images/placeholder.svg"
+    "image": "/images/webp/card/skoda-fabia.webp",
+    "heroImage": "/images/webp/hero/vehicle-hero-03-skoda-fabia-combi-2016.webp"
   },
   {
     "id": "skoda-octavia",
@@ -57,7 +61,8 @@
     "ac": true,
     "note": "The comfortable one. Long days on the highway and the climb to Durmitor.",
     "pricePerDay": 42,
-    "image": "/images/placeholder.svg"
+    "image": "/images/webp/card/skoda-octavia.webp",
+    "heroImage": "/images/webp/hero/vehicle-hero-04-skoda-octavia-combi-2018.webp"
   },
   {
     "id": "volkswagen-touran",
@@ -72,6 +77,7 @@
     "ac": true,
     "note": "Room for the whole family and the luggage that comes with them.",
     "pricePerDay": 45,
-    "image": "/images/placeholder.svg"
+    "image": "/images/webp/card/volkswagen-touran.webp",
+    "heroImage": "/images/webp/hero/vehicle-hero-05-volkswagen-touran-2017.webp"
   }
 ]

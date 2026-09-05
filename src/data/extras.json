@@ -1,0 +1,33 @@
+
+
+[
+
+  {
+    "id": "full-coverage",
+    "name": "Full coverage",
+    "price": 10,
+    "perDay": true
+  },
+
+  {
+    "id": "additional-driver",
+    "name": "Additional driver",
+    "price": 5,
+    "perDay": true
+  },
+
+  {
+    "id": "child-seat",
+    "name": "Child seat",
+    "price": 5,
+    "perDay": true
+  },
+
+  {
+    "id": "border-crossing",
+    "name": "Border crossing",
+    "price": 50,
+    "perDay": false
+  }
+
+]

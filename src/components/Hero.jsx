@@ -8,7 +8,7 @@ const Hero = () => {
             <picture className={styles.photo}>
                 <source media="(max-width:640px)" srcSet="/images/hero-mobile.webp" type="image/webp" />
                 <source srcSet="/images/hero-img.webp" type="image/webp" />
-                <img src="/images/hero-img.jpg" alt="" />
+                <img src="/images/hero-img.jpg" alt="Skadar Lake" fetchPriority="high" />
             </picture>
           <div className="shell">
               <div className={styles.in}>

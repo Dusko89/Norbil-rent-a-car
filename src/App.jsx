@@ -1,15 +1,11 @@
+import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
+import Home from "./pages/Home.jsx";
+import CarPage from "./pages/CarPage.jsx";
+
+import {Route, Routes} from "react-router-dom";
 
 
-
-import Fleet from "./components/Fleet.jsx";
-import Header from "./components/Header.jsx"
-import Hero from "./components/Hero.jsx"
-import Booking from "./components/Booking.jsx"
-import Footer from "./components/Footer.jsx";
-import Distances from "./components/Distances.jsx";
-import Electric from "./components/Electric.jsx";
-import Standard from "./components/Standard.jsx";
-import Faq from "./components/Faq.jsx"
 
 function App() {
 
@@ -20,13 +16,10 @@ function App() {
           <Header/>
 
           <main>
-              <Hero/>
-              <Booking/>
-              <Distances/>
-              <Fleet/>
-              <Electric/>
-              <Standard/>
-              <Faq/>
+              <Routes>
+                  <Route path="/"  element={<Home/>} />
+                  <Route path="/vozila/:id" element={<CarPage/>} />
+              </Routes>
           </main>
 
           <Footer/>
@@ -39,3 +32,4 @@ function App() {
 }
 
 export default App
+

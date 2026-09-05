@@ -4,7 +4,7 @@ import Home from "./pages/Home.jsx";
 import CarPage from "./pages/CarPage.jsx";
 
 import {Route, Routes} from "react-router-dom";
-
+import ScrollToTop from './components/ScrollToTop.jsx';
 
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
           <Header/>
 
           <main>
+              <ScrollToTop />
               <Routes>
                   <Route path="/"  element={<Home/>} />
                   <Route path="/vozila/:id" element={<CarPage/>} />

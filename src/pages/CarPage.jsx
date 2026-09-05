@@ -61,6 +61,50 @@ const CarPage = () => {
                     </div>
 
                     <p className={styles.note}>{car.note}</p>
+
+
+                <div className={styles.block}>
+                    <p className={styles.blockTitle}>INCLUDED</p>
+                    <ul className={styles.included}>
+                        <li>Unlimited mileage</li>
+                        <li>Basic insurance</li>
+                        <li>Airport delivery</li>
+                        <li>24/7 phone support</li>
+                    </ul>
+
+                </div>
+
+                <div className={styles.block}>
+                    <p className={styles.blockTitle}>Good to know</p>
+
+                    <div className={styles.terms}>
+                        <div className={styles.term}>
+                            <span>Deposit</span>
+                            <span>€200, returned at drop-off</span>
+                        </div>
+
+                        <div className={styles.term}>
+                            <span>Fuel</span>
+                            <span>Full to full</span>
+                        </div>
+
+                        <div className={styles.term}>
+                            <span>Driver</span>
+                            <span>21+, licence held 2 years</span>
+                        </div>
+
+                        <div className={styles.term}>
+                            <span>Payment</span>
+                            <span>nothing now, card or cash at pick-up</span>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+
                 </div>
 
                 <div className={styles.panel}>

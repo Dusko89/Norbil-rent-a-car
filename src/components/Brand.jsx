@@ -1,12 +1,12 @@
 
 import styles from "./Brand.module.css"
-
+import {Link} from "react-router-dom";
 
 const Brand = () => (
-    <a className={styles.brand} href="#top">
+    <Link className={styles.brand} to="/">
         <span className={styles.plate}>MNE</span>
         <span className={styles.word}>NORBIL</span>
-    </a>
+    </Link>
 );
 
 export default Brand;

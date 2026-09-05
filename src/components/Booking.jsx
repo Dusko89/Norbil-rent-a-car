@@ -1,5 +1,6 @@
 import styles from "./Booking.module.css";
 import { useState } from "react";
+import {useSearchParams} from "react-router-dom";
 
 const locationLabels = {
     podgorica: "Podgorica Airport (TGD)",
@@ -19,8 +20,12 @@ const Booking = () => {
     const [collectDate, setCollectDate] = useState("");
     const [returnDate, setReturnDate] = useState("");
     const [message, setMessage] = useState("");
+    const [searchParams, setSearchParams] = useSearchParams()
+
+
 
     const handleSubmit = (e) => {
+
         e.preventDefault();
         if (!location) {
             setMessage("Choose pick-up location!");
@@ -40,7 +45,9 @@ const Booking = () => {
 
         const days = Math.round((new Date(returnDate) - new Date(collectDate)) / 86400000);
         setMessage(`${days} days from ${locationLabels[location]}. Pick a car below.`);
+        setSearchParams({from: collectDate, to: returnDate, loc: location})
         document.getElementById("fleet").scrollIntoView({behavior: "smooth"});
+
 
     }
 

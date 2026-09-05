@@ -1,5 +1,5 @@
 import styles from "./CarCard.module.css";
-import {Link} from "react-router-dom";
+import {Link, useSearchParams} from "react-router-dom";
 
 
 const typeLabels = { hatchback: "Hatchback", wagon: "Station wagon", mpv: "MPV" };
@@ -8,9 +8,12 @@ const transmissionLabels = {automatic: "Automatic", manual: "Manual" };
 const fuelLabels = {petrol: "Petrol", diesel: "Diesel"};
 
 
+
 const CarCard = ({ car }) => {
+    const [searchParams] = useSearchParams()
+    const query = searchParams.toString();
     return (
-        <Link className={styles.card} to={`/vozila/${car.id}`}>
+        <Link className={styles.card} to={`/vozila/${car.id}?${query}`}>
             <div className={styles.visual}>
                 <img src={car.image} alt={car.name} loading="lazy" />
             </div>

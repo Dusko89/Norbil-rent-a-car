@@ -1,4 +1,5 @@
 import {useParams} from "react-router-dom";
+import {useSearchParams} from "react-router-dom";
 import cars from "../data/cars.json";
 import styles from "../components/CarCard.module.css";
 import extras from "../data/extras.json";
@@ -13,6 +14,13 @@ const fuelLabels = {petrol: "Petrol", diesel: "Diesel"};
 
 
 const CarPage = () => {
+
+    const [searchParams] = useSearchParams();
+    const [collectDate, setCollectDate] = useState(searchParams.get("from") || "");
+    const [returnDate, setReturnDate] = useState(searchParams.get("to") || "");
+    const [location, setLocation] = useState(searchParams.get("loc") || "");
+
+
     const {id} = useParams()
     const car = cars.find(c => c.id === id)
 
@@ -30,6 +38,26 @@ const CarPage = () => {
     if (!car) {
         return <p>Car not found.</p>;
     }
+
+
+
+    const days = Math.round((new Date(returnDate) - new Date(collectDate)) / 86400000);
+    const basePrice = days * car.pricePerDay;
+
+
+    const extrasPrices= selected.map(id => {
+            const extra = extras.find(e => e.id === id);
+            return extra.perDay ? extra.price * days : extra.price;
+        })
+
+    const extrasTotal = extrasPrices.reduce((sum, price) => sum + price, 0);
+
+    let total = basePrice + extrasTotal;
+
+
+
+
+
 
     return (
         <div>
@@ -54,6 +82,59 @@ const CarPage = () => {
                 </div>
             </div>
 
+
+
+            <section className={styles.book} id="book">
+                <div className="shell">
+                    <form className={styles.card} >
+
+                        <div className={styles.field}>
+                            <label htmlFor="loc">Pick up at</label>
+                            <select id="loc" value={location} onChange={
+                                (e) => setLocation(e.target.value)} >
+
+                                <option value="">Select pick-up location</option>
+                                <option value = "podgorica">Podgorica Airport (TGD)</option>
+                                <option value = "tivat">Tivat Airport (TIV)</option>
+                                <option value = "kotor">Kotor</option>
+                                <option value = "budva">Budva</option>
+                                <option value = "hercegnovi">Herceg Novi</option>
+
+                            </select>
+                        </div>
+
+                        <div className={styles.field}>
+                            <label htmlFor="d1">Collect</label>
+                            <input id="d1" type="date" min= "2026-09-01" value={collectDate} onChange={
+                                (e) => setCollectDate(e.target.value)
+                            } />
+                        </div>
+
+                        <div className={styles.field}>
+                            <label htmlFor="d2">Return</label>
+                            <input id="d2" type="date" min= "2026-09-01" value={ returnDate } onChange={
+                                (e) => setReturnDate(e.target.value)
+                            } />
+                        </div>
+
+                        <div className={styles.go}>
+                            <button className="gold-btn" type="submit">Reserve</button>
+                        </div>
+
+                    </form>
+
+
+                    <p className={styles.note}>
+                        <span>▲</span>
+                        <span>Norbil begins operating in spring 2027. Reserve now and we confirm your car as soon as the season opens — nothing is charged before then.</span>
+                    </p>
+                </div>
+            </section>
+
+
+
+
+
             {extras.map(extra => (
                 <div key={extra.id}>
 
@@ -70,8 +151,16 @@ const CarPage = () => {
 
                 </div>
 
+
             ))
             }
+
+            <div>
+                <p>{days} days × €{car.pricePerDay} = €{basePrice}</p>
+                <p>Extras: €{extrasTotal}</p>
+                <p>Total: €{total}</p>
+            </div>
+
         </div>
 
     )

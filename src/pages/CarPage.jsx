@@ -3,6 +3,7 @@ import { useState } from "react";
 import cars from "../data/cars.json";
 import extras from "../data/extras.json";
 import styles from "./CarPage.module.css";
+import GuestForm from "./GuestForm.jsx";
 
 const tagLabels = { city: "City", compact: "Compact", estate: "Estate", family: "Family" };
 const transmissionLabels = { automatic: "Automatic", manual: "Manual" };
@@ -107,6 +108,7 @@ const CarPage = () => {
 
                 </div>
 
+
                 <div className={styles.panel}>
                     <p className={styles.panelTitle}>Your booking</p>
 
@@ -171,7 +173,10 @@ const CarPage = () => {
                 </div>
 
             </div>
+            <GuestForm />
         </div>
+
+
     );
 };
 

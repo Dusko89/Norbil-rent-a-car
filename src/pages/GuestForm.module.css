@@ -1,0 +1,160 @@
+
+
+/* wrapper */
+.wrap {
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+    padding: 76px 0 88px;
+}
+
+.intro {
+    max-width: 56ch;
+    margin: 0 0 40px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(8, 37, 47, .72);
+}
+
+/* form */
+.form {
+    position: relative;
+    max-width: 920px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px 24px;
+}
+
+.full {
+    grid-column: 1 / -1;
+}
+
+/* honeypott */
+.hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* field */
+.fld {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.label {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: .17em;
+    text-transform: uppercase;
+    color: rgba(8, 37, 47, .72);
+    margin-bottom: 9px;
+}
+
+.label span {
+    text-transform: none;
+    letter-spacing: .04em;
+    opacity: .65;
+}
+
+.input,
+.textarea {
+    width: 100%;
+    background: #fff;
+    border: 1px solid rgba(8, 37, 47, .28);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 13px 14px;
+    transition: border-color .2s;
+}
+
+.input:hover,
+.textarea:hover {
+    border-color: rgba(8, 37, 47, .48);
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 108px;
+    font-family: var(--serif);
+    font-weight: 300;
+}
+
+.input[aria-invalid="true"],
+.textarea[aria-invalid="true"] {
+    border-color: #B3452F;
+}
+
+.error {
+    margin: 7px 0 0;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    line-height: 1.5;
+    letter-spacing: .02em;
+    color: #B3452F;
+}
+
+/*consent */
+.consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.consentBox {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin: 3px 0 0;
+    accent-color: var(--sea);
+    cursor: pointer;
+}
+
+.consentText {
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(8, 37, 47, .78);
+    cursor: pointer;
+}
+
+.consentText a {
+    color: var(--sea);
+    text-underline-offset: 3px;
+}
+
+/* actions  */
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px;
+    margin-top: 32px;
+}
+
+.note {
+    font-family: var(--mono);
+    font-size: 11px;
+    line-height: 1.6;
+    letter-spacing: .05em;
+    color: rgba(8, 37, 47, .5);
+}
+
+/* mobile */
+@media (max-width: 700px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+    .wrap {
+        padding: 52px 0 64px;
+    }
+}

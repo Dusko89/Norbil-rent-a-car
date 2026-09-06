@@ -51,7 +51,7 @@ const  Footer =  () => {
                 </div>
 
                 <div className={styles.base}>
-                    <span>Norbil d.o.o. — founded 1 July 2026, Tivat. Operations begin spring 2027.</span>
+                    <span>Norbil d.o.o. — founded 1 July 2026, Zeta. Operations begin spring 2027.</span>
                     <span>Terms · Privacy · Cancellation</span>
                 </div>
 

@@ -1,13 +1,18 @@
 import { useState } from "react";
 import styles from "./GuestForm.module.css";
 
-const GuestForm = () => {
+const FORM_ENDPOINT = "https://formspree.io/f/xjyvakje";
+
+const GuestForm = ({booking}) => {
 
     const [form, setForm] = useState({
         name: "", email: "", phone: "", flight: "", message: "", consent: false,
     });
 
     const [errors, setErrors] = useState({});
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [status, setStatus] = useState("");
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -38,16 +43,41 @@ const GuestForm = () => {
         return next;
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (e.currentTarget.elements.website.value !== "") return;
 
         const found = validate();
         setErrors(found);
-
         if (Object.keys(found).length > 0) return;
 
-        console.log(form);
+        setIsSubmitting(true);
+        setStatus("");
+
+        try {
+            const response = await fetch(FORM_ENDPOINT, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({ ...form, ...booking }),
+            });
+
+            if (!response.ok) {
+                throw new Error("Request failed");
+            }
+
+            setStatus("sent");
+            setForm({
+                name: "", email: "", phone: "", flight: "", message: "", consent: false,
+            });
+        } catch (error) {
+            console.error(error)
+            setStatus("error");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -62,7 +92,7 @@ const GuestForm = () => {
 
             <form className={styles.form} onSubmit={handleSubmit}>
 
-                {/* honeypot — ne uklanjaj */}
+                {}
                 <div className={styles.hp} inert>
                     <label htmlFor="website">Website</label>
                     <input
@@ -182,10 +212,24 @@ const GuestForm = () => {
                 </div>
 
                 <div className={styles.actions}>
-                    <button className="gold-btn" type="submit">Send booking request</button>
+                    <button className="gold-btn" type="submit" disabled={isSubmitting}>
+                        {isSubmitting ? "Sending…" : "Send booking request"}
+                    </button>
+
                     <p className={styles.note}>
                         This is a request, not a confirmed booking. We reply within 24 hours.
                     </p>
+
+                    {status === "sent" && (
+                        <p className={styles.sent} role="status">
+                            Request sent.
+                        </p>
+                    )}
+                    {status === "error" && (
+                        <p className={styles.error} role="status">
+                            Something went wrong. Please try again or write to booking@norbil.me
+                        </p>
+                    )}
                 </div>
 
             </form>

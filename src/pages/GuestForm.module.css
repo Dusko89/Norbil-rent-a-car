@@ -148,6 +148,20 @@
     color: rgba(8, 37, 47, .5);
 }
 
+.sent {
+    margin: 0;
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.6;
+    letter-spacing: .04em;
+    color: var(--pine);
+}
+
+.actions button[disabled] {
+    opacity: .55;
+    cursor: not-allowed;
+}
+
 /* mobile */
 @media (max-width: 700px) {
     .grid {

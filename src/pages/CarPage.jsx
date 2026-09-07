@@ -8,6 +8,7 @@ import GuestForm from "./GuestForm.jsx";
 const tagLabels = { city: "City", compact: "Compact", estate: "Estate", family: "Family" };
 const transmissionLabels = { automatic: "Automatic", manual: "Manual" };
 const fuelLabels = { petrol: "Petrol", diesel: "Diesel" };
+const FORM_ENDPOINT = "https://formspree.io/f/xjyvakje";
 
 const CarPage = () => {
     const [searchParams] = useSearchParams();
@@ -41,6 +42,24 @@ const CarPage = () => {
 
     const extrasTotal = extrasPrices.reduce((sum, price) => sum + price, 0);
     const total = basePrice + extrasTotal;
+
+    const extraNames = selected.map((selectedId) => {
+        const found = extras.find((item) => item.id === selectedId);
+        return found.name;
+    });
+
+
+    const booking = {
+        carId: car.id,
+        carName: car.name,
+        location,
+        collectDate,
+        returnDate,
+        days,
+        pricePerDay: car.pricePerDay,
+        extras: extraNames.join(", "),
+        estimatedTotal: total,
+    };
 
     return (
         <div className={styles.page}>
@@ -173,7 +192,7 @@ const CarPage = () => {
                 </div>
 
             </div>
-            <GuestForm />
+            <GuestForm booking={booking}/>
         </div>
 
 

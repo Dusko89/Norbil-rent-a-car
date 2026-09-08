@@ -49,7 +49,12 @@ const GuestForm = ({booking}) => {
 
         const found = validate();
         setErrors(found);
-        if (Object.keys(found).length > 0) return;
+        if (Object.keys(found).length > 0) {
+                const first = Object.keys(found)[0]
+                e.currentTarget.elements[first].focus();
+                return;
+            }
+
 
         setIsSubmitting(true);
         setStatus("");

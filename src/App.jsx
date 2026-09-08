@@ -2,6 +2,7 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Home from "./pages/Home.jsx";
 import CarPage from "./pages/CarPage.jsx";
+import Contact from "./components/Contact.jsx";
 
 import {Route, Routes} from "react-router-dom";
 import ScrollToTop from './components/ScrollToTop.jsx';
@@ -24,6 +25,7 @@ function App() {
           </main>
 
           <Footer/>
+          <Contact/>
       </div>
 
 

@@ -27,7 +27,6 @@ const Header = () => {
                        <button>ME</button>
                        <button>EN</button>
                        <button>NO</button>
-                       <button>RU</button>
                    </div>
 
                    <button className={styles.menuBtn} onClick={() => {setMenuOpen(!menuOpen)}}>Menu</button>

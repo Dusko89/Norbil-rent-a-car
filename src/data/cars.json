@@ -79,5 +79,23 @@
     "pricePerDay": 45,
     "image": "/images/webp/card/volkswagen-touran.webp",
     "heroImage": "/images/webp/hero/vehicle-hero-04-volkswagen-touran-2017.webp"
+  },
+  {
+    "id": "mercedes-vito",
+    "name": "Mercedes Vito",
+    "year": 2017,
+    "tag": "family",
+    "type": "van",
+    "fuel": "diesel",
+    "transmission": "manual",
+    "seats": 7,
+    "bags": 5,
+    "ac": true,
+    "note": "For larger families with more luggage.",
+    "pricePerDay": 130,
+    "image": "/images/webp/card/mercedes-vito.webp",
+    "heroImage": "/images/webp/hero/vehicle-hero-06-mercedes-vito-2017.webp"
   }
+
+
 ]

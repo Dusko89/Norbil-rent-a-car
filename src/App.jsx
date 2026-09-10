@@ -3,6 +3,8 @@ import Footer from './components/Footer.jsx';
 import Home from "./pages/Home.jsx";
 import CarPage from "./pages/CarPage.jsx";
 import Contact from "./components/Contact.jsx";
+import Privacy from "./pages/Privacy.jsx";
+import Terms from "./pages/Terms.jsx";
 
 import {Route, Routes} from "react-router-dom";
 import ScrollToTop from './components/ScrollToTop.jsx';
@@ -21,6 +23,8 @@ function App() {
               <Routes>
                   <Route path="/"  element={<Home/>} />
                   <Route path="/vozila/:id" element={<CarPage/>} />
+                  <Route path="/privacy" element={<Privacy />} />
+                  <Route path="/terms" element={<Terms />} />
               </Routes>
           </main>
 

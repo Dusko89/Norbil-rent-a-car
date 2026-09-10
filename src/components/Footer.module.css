@@ -62,7 +62,32 @@
     border-top: 1px solid var(--line-ink);
     font-family: var(--mono);
     font-size: 11px;
-    color: rgba(140,166,169,.8);
+    color: rgba(140, 166, 169, .8);
+}
+
+.legal {
+    display: flex;
+    gap: 20px;
+}
+
+.legal a {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: rgba(140, 166, 169, .8);
+    text-decoration: none;
+}
+
+.legal a:hover {
+    color: #fff;
+}
+
+.cookie {
+    max-width: 78ch;
+    margin: 16px 0 0;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    line-height: 1.75;
+    color: rgba(140, 166, 169, .55);
 }
 
 @media (max-width: 1000px) {

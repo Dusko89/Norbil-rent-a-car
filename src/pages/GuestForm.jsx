@@ -1,5 +1,8 @@
+
+
 import { useState } from "react";
 import styles from "./GuestForm.module.css";
+import { Link } from "react-router-dom";
 
 const FORM_ENDPOINT = "https://formspree.io/f/xjyvakje";
 
@@ -37,7 +40,7 @@ const GuestForm = ({booking}) => {
         }
 
         if (!form.consent) {
-            next.consent = "You need to agree before we can reply";
+            next.consent = "Please confirm you have read the Privacy Policy and Terms";
         }
 
         return next;
@@ -205,9 +208,15 @@ const GuestForm = ({booking}) => {
                                 aria-invalid={errors.consent ? true : undefined}
                                 aria-describedby={errors.consent ? "consent-error" : undefined}
                             />
+
+
                             <label className={styles.consentText} htmlFor="consent">
-                                I agree that Norbil may use my details to respond to this request.
+                                I have read the <Link to="/privacy">Privacy Policy</Link> and the{" "}
+                                <Link to="/terms">Website &amp; Reservation Terms</Link>, and I understand
+                                that sending this request does not create a confirmed reservation.
                             </label>
+
+
                         </div>
                         {errors.consent && (
                             <p id="consent-error" className={styles.error}>{errors.consent}</p>
@@ -218,18 +227,24 @@ const GuestForm = ({booking}) => {
 
                 <div className={styles.actions}>
                     <button className="gold-btn" type="submit" disabled={isSubmitting}>
-                        {isSubmitting ? "Sending…" : "Send booking request"}
+                        {isSubmitting ? "Sending…" : "Send rental request"}
                     </button>
 
                     <p className={styles.note}>
-                        This is a request, not a confirmed booking. We reply within 24 hours.
+                        Submitting this request does not create a confirmed reservation. We will check availability and reply within 24 hours with the final price and booking details.
                     </p>
 
                     {status === "sent" && (
-                        <p className={styles.sent} role="status">
-                            Request sent.
-                        </p>
+                        <div className={styles.sent} role="status">
+                            <p className={styles.sentTitle}>Request received</p>
+                            <p>Thank you. We have received your rental request.</p>
+                            <p><strong>Your reservation is not confirmed yet.</strong></p>
+                            <p>We will review availability and contact you with the final price and booking details.</p>
+                        </div>
                     )}
+
+
+
                     {status === "error" && (
                         <p className={styles.error} role="status">
                             Something went wrong. Please try again or write to booking@norbil.me

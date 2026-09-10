@@ -27,7 +27,7 @@
     "bags": 2,
     "ac": true,
     "note": "Cheapest to run. A fortnight on the coast without watching the fuel gauge.",
-    "pricePerDay": 30,
+    "pricePerDay": 35,
     "image": "/images/webp/card/renault-clio.webp",
     "heroImage": "/images/webp/hero/vehicle-hero-02-renault-clio-2018.webp"
 
@@ -44,7 +44,7 @@
     "bags": 3,
     "ac": true,
     "note": "Small enough for the coast, and it swallows luggage.",
-    "pricePerDay": 34,
+    "pricePerDay": 40,
     "image": "/images/webp/card/skoda-fabia.webp",
     "heroImage": "/images/webp/hero/vehicle-hero-03-skoda-fabia-combi-2016.webp"
   },
@@ -60,7 +60,7 @@
     "bags": 4,
     "ac": true,
     "note": "The comfortable one. Long days on the highway and the climb to Durmitor.",
-    "pricePerDay": 42,
+    "pricePerDay": 55,
     "image": "/images/webp/card/skoda-octavia.webp",
     "heroImage": "/images/webp/hero/vehicle-hero-05-skoda-octavia-combi-2018.webp"
   },
@@ -76,7 +76,7 @@
     "bags": 3,
     "ac": true,
     "note": "Room for the whole family and the luggage that comes with them.",
-    "pricePerDay": 45,
+    "pricePerDay": 60,
     "image": "/images/webp/card/volkswagen-touran.webp",
     "heroImage": "/images/webp/hero/vehicle-hero-04-volkswagen-touran-2017.webp"
   },

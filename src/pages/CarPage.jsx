@@ -100,7 +100,7 @@ const CarPage = () => {
                     <div className={styles.terms}>
                         <div className={styles.term}>
                             <span>Deposit</span>
-                            <span>€200, returned at drop-off</span>
+                            <span>No deposit required</span>
                         </div>
 
                         <div className={styles.term}>

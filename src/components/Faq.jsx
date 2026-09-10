@@ -23,18 +23,14 @@ const Faq = () => {
                         <div className={styles.row}>
                             <h3>Can I drive into Albania, Bosnia or Croatia?</h3>
                             <p>
-                                <span>Yes, with a green card arranged in advance — tell us at booking. Cross-border fee: </span>
-                                <span className={styles.todo}>amount</span>
+                                Yes, with a green card arranged in advance — tell us at booking.
+                                Cross-border fee: €50, charged once per rental.
                             </p>
-
                         </div>
+
                         <div className={styles.row}>
                             <h3>Is there a deposit?</h3>
-                            <p>
-                                <span className={styles.todo}>amount </span>
-                                <span>— stated in the contract and returned at drop-off, provided the car comes back as it left.</span>
-                            </p>
-
+                            <p>No deposit required. You pay the rental price, nothing is held on your card.</p>
                         </div>
 
                         <div className={styles.row}>

@@ -1,11 +1,80 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>norbil-rent-a-car</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <title>Norbil — Car rental in Montenegro | Tivat, Podgorica, Kotor, Budva</title>
+  <meta name="description" content="Small independent car rental in Montenegro. Written terms, one price, no deposit. Pick-up at Tivat and Podgorica airports, Kotor, Budva and Herceg Novi." />
+
+  <link rel="canonical" href="https://norbil.me/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://norbil.me/" />
+  <meta property="og:title" content="Norbil — Car rental in Montenegro" />
+  <meta property="og:description" content="Small independent car rental in Montenegro. Written terms, one price, no deposit." />
+  <meta property="og:image" content="https://norbil.me/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Norbil" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Norbil — Car rental in Montenegro" />
+  <meta name="twitter:description" content="Small independent car rental in Montenegro. Written terms, one price, no deposit." />
+  <meta name="twitter:image" content="https://norbil.me/og-image.jpg" />
+
+  <meta name="theme-color" content="#08252F" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRental",
+      "@id": "https://norbil.me/#organization",
+      "name": "NORBIL DOO",
+      "alternateName": "Norbil",
+      "url": "https://norbil.me/",
+      "description": "Independent car rental in Montenegro. Written terms, one price, no deposit. Pick-up at Tivat and Podgorica airports, Kotor, Budva and Herceg Novi.",
+      "slogan": "Norsk bil. Crnogorski put.",
+      "email": "booking@norbil.me",
+      "telephone": "+38267961062",
+      "vatID": "04405463",
+      "foundingDate": "2026-07-01",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday",
+          "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mojanska Ulica 51",
+        "addressLocality": "Mojanovići, Zeta",
+        "addressCountry": "ME"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Montenegro"
+      },
+      "availableLanguage": ["en", "sr", "no"],
+      "currenciesAccepted": "EUR",
+      "location": [
+        { "@type": "Place", "name": "Tivat Airport (TIV)" },
+        { "@type": "Place", "name": "Podgorica Airport (TGD)" },
+        { "@type": "Place", "name": "Kotor" },
+        { "@type": "Place", "name": "Budva" },
+        { "@type": "Place", "name": "Herceg Novi" }
+      ]
+    }
+  </script>
+
+
+
+</head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>

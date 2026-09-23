@@ -1,6 +1,7 @@
 import styles from "./Booking.module.css";
 import { useState } from "react";
 import {useSearchParams} from "react-router-dom";
+import { today } from "../utils/date";
 
 const locationLabels = {
     podgorica: "Podgorica Airport (TGD)",
@@ -22,7 +23,8 @@ const Booking = () => {
     const [message, setMessage] = useState("");
     const [searchParams, setSearchParams] = useSearchParams()
 
-
+    const minDateCollect = today();
+    const minDateReturn = collectDate || minDateCollect;
 
     const handleSubmit = (e) => {
 
@@ -76,14 +78,14 @@ const Booking = () => {
 
                     <div className={styles.field}>
                         <label htmlFor="d1">Collect</label>
-                        <input id="d1" type="date" min= "2026-09-01" value={collectDate} onChange={
+                        <input id="d1" type="date" min={minDateCollect} value={collectDate} onChange={
                             (e) => setCollectDate(e.target.value)
                         } />
                     </div>
 
                     <div className={styles.field}>
                         <label htmlFor="d2">Return</label>
-                        <input id="d2" type="date" min= "2026-09-01" value={ returnDate } onChange={
+                        <input id="d2" type="date" min={minDateReturn} value={ returnDate } onChange={
                             (e) => setReturnDate(e.target.value)
                         } />
                     </div>

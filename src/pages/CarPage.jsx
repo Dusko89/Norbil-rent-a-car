@@ -4,11 +4,12 @@ import cars from "../data/cars.json";
 import extras from "../data/extras.json";
 import styles from "./CarPage.module.css";
 import GuestForm from "./GuestForm.jsx";
+import { today } from "../utils/date";
 
 const tagLabels = { city: "City", compact: "Compact", estate: "Estate", family: "Family" };
 const transmissionLabels = { automatic: "Automatic", manual: "Manual" };
 const fuelLabels = { petrol: "Petrol", diesel: "Diesel" };
-const FORM_ENDPOINT = "https://formspree.io/f/xjyvakje";
+
 
 const CarPage = () => {
     const [searchParams] = useSearchParams();
@@ -33,6 +34,10 @@ const CarPage = () => {
     }
 
     const days = Math.round((new Date(returnDate) - new Date(collectDate)) / 86400000) || 0;
+    const minDateCollect = today();
+    const minDateReturn = collectDate || minDateCollect;
+
+
     const basePrice = days * car.pricePerDay;
 
     const extrasPrices = selected.map(extraId => {
@@ -145,13 +150,13 @@ const CarPage = () => {
 
                     <div className={styles.field}>
                         <label htmlFor="d1">Collect</label>
-                        <input id="d1" type="date" min="2026-09-01" value={collectDate}
+                        <input id="d1" type="date" min={minDateCollect} value={collectDate}
                                onChange={(e) => setCollectDate(e.target.value)} />
                     </div>
 
                     <div className={styles.field}>
                         <label htmlFor="d2">Return</label>
-                        <input id="d2" type="date" min="2026-09-01" value={returnDate}
+                        <input id="d2" type="date" min={minDateReturn} value={returnDate}
                                onChange={(e) => setReturnDate(e.target.value)} />
                     </div>
 

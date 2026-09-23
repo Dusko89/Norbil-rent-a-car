@@ -3,6 +3,11 @@ import styles from './Legal.module.css';
 const Privacy = () => {
     return (
         <div className={styles.page}>
+
+            <title>Privacy Policy — Norbil</title>
+            <meta name="description" content="How Norbil DOO collects and processes personal data from rental requests." />
+            <link rel="canonical" href="https://norbil.me/privacy" />
+
             <div className="shell">
 
                 <h1 className={styles.title}>Privacy Policy</h1>

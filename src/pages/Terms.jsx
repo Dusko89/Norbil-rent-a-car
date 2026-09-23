@@ -4,6 +4,12 @@ import styles from './Legal.module.css';
 const Terms = () => {
     return (
         <div className={styles.page}>
+
+            <title>Website &amp; Reservation Terms — Norbil</title>
+            <meta name="description" content="Rental request and reservation terms for Norbil DOO. A request is not a confirmed booking until we confirm it in writing." />
+            <link rel="canonical" href="https://norbil.me/terms" />
+
+
             <div className="shell">
 
                 <h1 className={styles.title}>Website &amp; Reservation Terms</h1>

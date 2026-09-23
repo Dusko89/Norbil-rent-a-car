@@ -69,6 +69,10 @@ const CarPage = () => {
     return (
         <div className={styles.page}>
 
+            <title>{`${car.name} ${car.year} — Car rental Montenegro | Norbil`}</title>
+            <meta name="description" content={`Rent a ${car.name} in Montenegro from €${car.pricePerDay} per day. ${car.note}`} />
+            <link rel="canonical" href={`https://norbil.me/vozila/${car.id}`} />
+
             <div className={styles.hero}>
                 <img src={car.heroImage} alt={car.name} />
             </div>

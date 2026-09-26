@@ -4,7 +4,7 @@ import {Link, useSearchParams} from "react-router-dom";
 
 const typeLabels = { hatchback: "Hatchback", wagon: "Station wagon", mpv: "MPV" };
 const tagLabels = { city: "City", compact: "Compact", estate: "Estate", family: "Family" };
-const transmissionLabels = {automatic: "Automatic", manual: "Manual" };
+const transmissionLabels = {automatic: "AUTOMATIC", manual: "MANUAL" };
 const fuelLabels = {petrol: "Petrol", diesel: "Diesel"};
 
 
@@ -22,8 +22,9 @@ const CarCard = ({ car }) => {
                 <span className={styles.tag}>{tagLabels[car.tag]}</span>
                 <h3 className={styles.name}>{car.name}</h3>
                 <span className={styles.year}>{car.year}</span>
+                <span className={styles.gearbox}>{transmissionLabels[car.transmission]}</span>
                 <div className={styles.spec}>
-                    {fuelLabels[car.fuel]} · {transmissionLabels[car.transmission]}<br />
+                    {fuelLabels[car.fuel]} · <br />
                     {car.seats} seats · {car.bags} bags{car.ac && <span> · A/C</span>}
                 </div>
                 <p className={styles.note}>{car.note}</p>

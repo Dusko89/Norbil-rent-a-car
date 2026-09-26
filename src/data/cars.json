@@ -11,7 +11,7 @@
     "bags": 1,
     "ac": true,
     "note": "The narrow one. Old-town lanes, and parking in Budva in August.",
-    "pricePerDay": 25,
+    "pricePerDay": 30,
     "image": "/images/webp/card/volkswagen-up.webp",
     "heroImage": "/images/webp/hero/vehicle-hero-01-volkswagen-up-2013.webp"
   },
@@ -39,7 +39,7 @@
     "tag": "estate",
     "type": "wagon",
     "fuel": "diesel",
-    "transmission": "manual",
+    "transmission": "automatic",
     "seats": 5,
     "bags": 3,
     "ac": true,

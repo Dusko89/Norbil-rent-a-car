@@ -149,6 +149,8 @@ const Terms = () => {
                     NORBIL will not charge an undisclosed security deposit or mandatory fee that has not
                     been communicated as part of the applicable reservation or rental terms.
                 </p>
+                <p>The standard security deposit is €200, held at pick-up and released at drop-off. Guests who take full coverage are not charged a deposit.</p>
+                <p>NORBIL will not charge an undisclosed security deposit or mandatory fee that has not been communicated as part of the applicable reservation or rental terms.</p>
 
                 <h2 className={styles.h2}>9. Cancellation and No-Show Conditions</h2>
                 <p>

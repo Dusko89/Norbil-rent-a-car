@@ -30,7 +30,7 @@ const Faq = () => {
 
                         <div className={styles.row}>
                             <h3>Is there a deposit?</h3>
-                            <p>No deposit required. You pay the rental price, nothing is held on your card.</p>
+                            <p>€200 deposit — or €0 with full coverage</p>
                         </div>
 
                         <div className={styles.row}>

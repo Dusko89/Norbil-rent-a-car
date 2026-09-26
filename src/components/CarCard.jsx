@@ -21,6 +21,7 @@ const CarCard = ({ car }) => {
             <div className={styles.body}>
                 <span className={styles.tag}>{tagLabels[car.tag]}</span>
                 <h3 className={styles.name}>{car.name}</h3>
+                <span className={styles.similar}>or similar</span>
                 <span className={styles.year}>{car.year}</span>
                 <span className={styles.gearbox}>{transmissionLabels[car.transmission]}</span>
                 <div className={styles.spec}>

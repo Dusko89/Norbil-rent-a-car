@@ -83,10 +83,9 @@ const CarPage = () => {
                     <span className={styles.tag}>{tagLabels[car.tag]}</span>
                     <h1 className={styles.name}>{car.name}</h1>
                     <span className={styles.year}>{car.year}</span>
-
+                    <span className={styles.gearbox}>{transmissionLabels[car.transmission]}</span>
                     <div className={styles.spec}>
-                        {fuelLabels[car.fuel]} · {transmissionLabels[car.transmission]}<br />
-                        {car.seats} seats · {car.bags} bags{car.ac && " · A/C"}
+                        {fuelLabels[car.fuel]} · {car.seats} seats · {car.bags} bags{car.ac && " · A/C"}
                     </div>
 
                     <p className={styles.note}>{car.note}</p>
@@ -196,7 +195,7 @@ const CarPage = () => {
 
                     <p className={styles.hint}>
                         <span>▲</span>
-                        <span>Norbil begins operating in spring 2027. Nothing is charged before then.</span>
+                        <span>We are now taking bookings for the 2027 season. Nothing is charged now — we confirm your car by email.</span>
                     </p>
                 </div>
 

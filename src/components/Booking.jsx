@@ -99,7 +99,7 @@ const Booking = () => {
 
                 <p className={styles.note}>
                     <span>▲</span>
-                    <span>Norbil begins operating in spring 2027. Reserve now and we confirm your car as soon as the season opens — nothing is charged before then.</span>
+                    <span>We are now taking bookings for the 2027 season. Nothing is charged now — we confirm your car by email.</span>
                 </p>
             </div>
         </section>

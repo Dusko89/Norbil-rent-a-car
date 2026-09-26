@@ -115,7 +115,9 @@ to { transform: translateY(0);
     .photo img { object-position: 64% 46%; }
     .photo::after {
         background: linear-gradient(0deg, rgba(6,28,37,.95) 6%, rgba(6,28,37,.78) 46%, rgba(6,28,37,.55) 100%);
-
+    }
+    .in {
+        padding: 56px 0 105px;
     }
 }
 

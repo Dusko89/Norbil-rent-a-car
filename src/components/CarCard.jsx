@@ -24,7 +24,7 @@ const CarCard = ({ car }) => {
                 <span className={styles.year}>{car.year}</span>
                 <span className={styles.gearbox}>{transmissionLabels[car.transmission]}</span>
                 <div className={styles.spec}>
-                    {fuelLabels[car.fuel]} · <br />
+                    {fuelLabels[car.fuel]}  <br />
                     {car.seats} seats · {car.bags} bags{car.ac && <span> · A/C</span>}
                 </div>
                 <p className={styles.note}>{car.note}</p>

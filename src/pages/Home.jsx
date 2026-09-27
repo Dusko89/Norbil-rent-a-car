@@ -8,7 +8,11 @@ import Faq from "../components/Faq.jsx";
 
 const Home = () => {
     return (
+
+
         <div>
+            <link rel="canonical" href="https://norbil.me/" />
+
             <Hero/>
             <Booking/>
             <Fleet/>

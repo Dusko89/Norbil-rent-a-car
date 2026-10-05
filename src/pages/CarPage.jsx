@@ -6,7 +6,7 @@ import styles from "./CarPage.module.css";
 import GuestForm from "./GuestForm.jsx";
 import { today } from "../utils/date";
 
-const tagLabels = { city: "City", compact: "Compact", estate: "Estate", family: "Family" };
+const tagLabels = { city: "City", compact: "Compact", estate: "Estate", family: "Family", van: "Van" };
 const transmissionLabels = { automatic: "Automatic", manual: "Manual" };
 const fuelLabels = { petrol: "Petrol", diesel: "Diesel" };
 
@@ -28,7 +28,7 @@ const CarPage = () => {
             setSelected([...selected, extraId]);
         }
     };
-
+    
     if (!car) {
         return <p>Car not found.</p>;
     }

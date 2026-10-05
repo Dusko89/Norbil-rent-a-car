@@ -3,7 +3,7 @@ import {Link, useSearchParams} from "react-router-dom";
 
 
 const typeLabels = { hatchback: "Hatchback", wagon: "Station wagon", mpv: "MPV" };
-const tagLabels = { city: "City", compact: "Compact", estate: "Estate", family: "Family" };
+const tagLabels = { city: "City", compact: "Compact", estate: "Estate", family: "Family", van: "Van" };
 const transmissionLabels = {automatic: "AUTOMATIC", manual: "MANUAL" };
 const fuelLabels = {petrol: "Petrol", diesel: "Diesel"};
 

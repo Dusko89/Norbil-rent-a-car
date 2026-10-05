@@ -12,6 +12,10 @@
     "ac": true,
     "note": "The narrow one. Old-town lanes, and parking in Budva in August.",
     "pricePerDay": 30,
+    "deposit": 100,
+    "excess": 300,
+    "fullCoveragePerDay": 10,
+    "fullCoverageExcess": 0,
     "image": "/images/webp/card/volkswagen-up.webp",
     "heroImage": "/images/webp/hero/vehicle-hero-01-volkswagen-up-2013.webp"
   },
@@ -28,9 +32,12 @@
     "ac": true,
     "note": "Cheapest to run. A fortnight on the coast without watching the fuel gauge.",
     "pricePerDay": 35,
+    "deposit": 200,
+    "excess": 500,
+    "fullCoveragePerDay": 10,
+    "fullCoverageExcess": 0,
     "image": "/images/webp/card/renault-clio.webp",
     "heroImage": "/images/webp/hero/vehicle-hero-02-renault-clio-2018.webp"
-
   },
   {
     "id": "skoda-fabia",
@@ -45,6 +52,10 @@
     "ac": true,
     "note": "Small enough for the coast, and it swallows luggage.",
     "pricePerDay": 40,
+    "deposit": 200,
+    "excess": 500,
+    "fullCoveragePerDay": 10,
+    "fullCoverageExcess": 0,
     "image": "/images/webp/card/skoda-fabia.webp",
     "heroImage": "/images/webp/hero/vehicle-hero-03-skoda-fabia-combi-2016.webp"
   },
@@ -61,6 +72,10 @@
     "ac": true,
     "note": "The comfortable one. Long days on the highway and the climb to Durmitor.",
     "pricePerDay": 55,
+    "deposit": 300,
+    "excess": 1000,
+    "fullCoveragePerDay": 15,
+    "fullCoverageExcess": 0,
     "image": "/images/webp/card/skoda-octavia.webp",
     "heroImage": "/images/webp/hero/vehicle-hero-05-skoda-octavia-combi-2018.webp"
   },
@@ -77,6 +92,10 @@
     "ac": true,
     "note": "Room for the whole family and the luggage that comes with them.",
     "pricePerDay": 60,
+    "deposit": 300,
+    "excess": 1000,
+    "fullCoveragePerDay": 15,
+    "fullCoverageExcess": 0,
     "image": "/images/webp/card/volkswagen-touran.webp",
     "heroImage": "/images/webp/hero/vehicle-hero-04-volkswagen-touran-2017.webp"
   },
@@ -84,7 +103,7 @@
     "id": "mercedes-vito",
     "name": "Mercedes Vito",
     "year": 2017,
-    "tag": "family",
+    "tag": "van",
     "type": "van",
     "fuel": "diesel",
     "transmission": "automatic",
@@ -93,9 +112,12 @@
     "ac": true,
     "note": "For larger families with more luggage.",
     "pricePerDay": 130,
+    "deposit": 500,
+    "excess": 1500,
+    "fullCoveragePerDay": 20,
+    "fullCoverageExcess": 0,
     "image": "/images/webp/card/mercedes-vito.webp",
     "heroImage": "/images/webp/hero/vehicle-hero-06-mercedes-vito-2017.webp"
   }
-
 
 ]

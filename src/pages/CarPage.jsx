@@ -5,11 +5,7 @@ import extras from "../data/extras.json";
 import styles from "./CarPage.module.css";
 import GuestForm from "./GuestForm.jsx";
 import { today } from "../utils/date";
-
-const tagLabels = { city: "City", compact: "Compact", estate: "Estate", family: "Family", van: "Van" };
-const transmissionLabels = { automatic: "Automatic", manual: "Manual" };
-const fuelLabels = { petrol: "Petrol", diesel: "Diesel" };
-
+import {tagLabels, transmissionLabels, fuelLabels } from "../data/labels";
 
 const CarPage = () => {
     const [searchParams] = useSearchParams();

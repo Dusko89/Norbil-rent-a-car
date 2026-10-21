@@ -1,12 +1,6 @@
 import styles from "./CarCard.module.css";
 import {Link, useSearchParams} from "react-router-dom";
-
-
-const typeLabels = { hatchback: "Hatchback", wagon: "Station wagon", mpv: "MPV" };
-const tagLabels = { city: "City", compact: "Compact", estate: "Estate", family: "Family", van: "Van" };
-const transmissionLabels = {automatic: "AUTOMATIC", manual: "MANUAL" };
-const fuelLabels = {petrol: "Petrol", diesel: "Diesel"};
-
+import {tagLabels, transmissionLabels, fuelLabels } from "../data/labels";
 
 
 const CarCard = ({ car }) => {

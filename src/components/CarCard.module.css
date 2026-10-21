@@ -126,4 +126,5 @@
     letter-spacing: .12em;
     font-weight: 600;
     color: var(--sea);
+    text-transform: uppercase;
 }

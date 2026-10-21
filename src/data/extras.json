@@ -2,12 +2,6 @@
 
 [
 
-  {
-    "id": "full-coverage",
-    "name": "Full coverage",
-    "price": 10,
-    "perDay": true
-  },
 
   {
     "id": "additional-driver",

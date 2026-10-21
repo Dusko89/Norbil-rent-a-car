@@ -16,6 +16,7 @@ const CarPage = () => {
     const [collectDate, setCollectDate] = useState(searchParams.get("from") || "");
     const [returnDate, setReturnDate] = useState(searchParams.get("to") || "");
     const [selected, setSelected] = useState([]);
+    const [fullCoverage, setFullCoverage] = useState(false);
 
     const toggleExtras = (extraId) => {
         if (selected.includes(extraId)) {
@@ -42,7 +43,8 @@ const CarPage = () => {
     });
 
     const extrasTotal = extrasPrices.reduce((sum, price) => sum + price, 0);
-    const total = basePrice + extrasTotal;
+    const fullCoveragePrice = fullCoverage  ? car.fullCoveragePerDay * days : 0
+    const total = basePrice + extrasTotal + fullCoveragePrice;
 
     const extraNames = selected.map((selectedId) => {
         const found = extras.find((item) => item.id === selectedId);
@@ -60,6 +62,9 @@ const CarPage = () => {
         pricePerDay: car.pricePerDay,
         extras: extraNames.join(", "),
         estimatedTotal: total,
+        coverage: fullCoverage ? "Full coverage" : "Basic",
+        fullCoveragePrice,
+        excess: fullCoverage ? car.fullCoverageExcess : car.excess,
     };
 
     return (
@@ -82,7 +87,7 @@ const CarPage = () => {
                     <span className={styles.year}>{car.year}</span>
                     <span className={styles.gearbox}>{transmissionLabels[car.transmission]}</span>
                     <div className={styles.spec}>
-                        {fuelLabels[car.fuel]} · {car.seats} seats · {car.bags} bags{car.ac && " · A/C"}
+                        {fuelLabels[car.fuel]} · {car.seats} seats · {car.bags} {car.bags === 1 ? "bag" : "bags"}{car.ac && " · A/C"}
                     </div>
 
                     <p className={styles.note}>{car.note}</p>
@@ -92,7 +97,7 @@ const CarPage = () => {
                     <p className={styles.blockTitle}>INCLUDED</p>
                     <ul className={styles.included}>
                         <li>Unlimited mileage</li>
-                        <li>Basic insurance</li>
+                        <li>Basic cover (CDW) </li>
                         <li>Airport delivery</li>
                         <li>24/7 phone support</li>
                     </ul>
@@ -105,7 +110,13 @@ const CarPage = () => {
                     <div className={styles.terms}>
                         <div className={styles.term}>
                             <span>Deposit</span>
-                            <span>€200 deposit — or €0 with full coverage</span>
+                            <span>{car.deposit === 0 ? "None" : `€${car.deposit}`}</span>
+                        </div>
+
+                        <div className={styles.term}>
+                            <span>Excess</span>
+                            <span>€{car.excess} with basic coverage or €{car.fullCoverageExcess} with full coverage</span>
+
                         </div>
 
                         <div className={styles.term}>
@@ -120,7 +131,7 @@ const CarPage = () => {
 
                         <div className={styles.term}>
                             <span>Payment</span>
-                            <span>nothing now, card or cash at pick-up</span>
+                            <span>Nothing now, card or cash at pick-up</span>
                         </div>
 
 
@@ -161,6 +172,17 @@ const CarPage = () => {
                     </div>
 
                     <div className={styles.extras}>
+                        <div className={styles.extra}>
+                        <label htmlFor="fullCoverage">Full coverage</label>
+                        <span>€{car.fullCoveragePerDay} / day</span>
+                        <input
+                            type="checkbox"
+                            id="fullCoverage"
+                            checked={fullCoverage}
+                            onChange={() => setFullCoverage(!fullCoverage)}
+                        />
+                        </div>
+
                         {extras.map(extra => (
                             <div className={styles.extra} key={extra.id}>
                                 <label htmlFor={extra.id}>{extra.name}</label>
@@ -184,6 +206,12 @@ const CarPage = () => {
                             <span>Extras</span>
                             <span>€{extrasTotal}</span>
                         </div>
+                        {fullCoverage && (
+                            <div className={styles.line}>
+                                <span>Full coverage</span>
+                                <span>€{fullCoveragePrice}</span>
+                          </div>
+                        )}
                         <div className={styles.grand}>
                             <em>Total</em>
                             <strong>€{total}</strong>

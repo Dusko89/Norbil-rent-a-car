@@ -1,6 +1,7 @@
 
 
 import styles from "./Faq.module.css"
+import cars from "../data/cars.json"
 
 const Faq = () => {
     return(
@@ -30,7 +31,12 @@ const Faq = () => {
 
                         <div className={styles.row}>
                             <h3>Is there a deposit?</h3>
-                            <p>€200 deposit — or €0 with full coverage</p>
+                            <p>No deposit required</p>
+                        </div>
+
+                        <div className={styles.row}>
+                            <h3>What about excess?</h3>
+                            <p>€0 with full coverage</p>
                         </div>
 
                         <div className={styles.row}>

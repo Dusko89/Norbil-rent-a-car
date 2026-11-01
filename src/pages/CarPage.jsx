@@ -220,7 +220,7 @@ const CarPage = () => {
 
                     <p className={styles.hint}>
                         <span>▲</span>
-                        <span>We are now taking bookings for the 2027 season. Nothing is charged now — we confirm your car by email.</span>
+                        <span>Nothing is charged now — we confirm your car by email.</span>
                     </p>
                 </div>
 

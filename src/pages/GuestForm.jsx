@@ -231,7 +231,7 @@ const GuestForm = ({booking}) => {
                     </button>
 
                     <p className={styles.note}>
-                        Submitting this request does not create a confirmed reservation. We will check availability and reply within 24 hours with the final price and booking details.
+                        Submitting this request does not create a confirmed reservation. We will check availability and reply usually within 1 hour with the final price and booking details.
                     </p>
 
                     {status === "sent" && (

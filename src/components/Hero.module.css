@@ -62,6 +62,11 @@
     color: var(--on-ink-mute);
 }
 
+.badge {
+    color: var(--gold-hi);
+    font-weight: 600;
+}
+
 .in h1 em {
     display: block;
     font-style: normal;

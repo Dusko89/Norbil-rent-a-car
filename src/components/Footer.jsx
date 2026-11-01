@@ -21,8 +21,8 @@ const Footer = () => {
                     <div>
                         <h4>Pick-up points</h4>
                         <ul>
-                            <li>Tivat Airport (TIV)</li>
                             <li>Podgorica Airport (TGD)</li>
+                            <li>Tivat Airport (TIV)</li>
                             <li>Kotor</li>
                             <li>Budva</li>
                             <li>Herceg Novi</li>

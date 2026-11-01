@@ -14,7 +14,7 @@ const Faq = () => {
                     <div>
                         <p className="eyebrow">Before you book</p>
                         <h2 className="h2">The questions<br/>everyone asks.</h2>
-                        <p className="lede">Marked items are still being finalised before bookings open. They will be answered with a number, not a phrase.</p>
+                        <p className="lede">Everything worth knowing before you book. Still unsure about something? Just ask.</p>
                     </div>
 
 

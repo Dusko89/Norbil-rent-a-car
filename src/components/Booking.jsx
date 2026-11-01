@@ -99,7 +99,7 @@ const Booking = () => {
 
                 <p className={styles.note}>
                     <span>▲</span>
-                    <span>We are now taking bookings for the 2027 season. Nothing is charged now — we confirm your car by email.</span>
+                    <span>No deposit, nothing to pay now. Send your dates and we confirm by email, usually within the hour.</span>
                 </p>
             </div>
         </section>

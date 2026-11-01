@@ -18,11 +18,13 @@ const Hero = () => {
                   </h1>
                   <p className={styles.gloss}>Norwegian standards. Montenegrin roads. That's the whole idea behind the name.</p>
 
+
                   <div className={styles.meta}>
                       <span>Podgorica TGD · Tivat TIV</span>
-
-
+                      <span className={styles.badge}>No deposit · Pay at pick-up</span>
                   </div>
+
+
 
               </div>
           </div>

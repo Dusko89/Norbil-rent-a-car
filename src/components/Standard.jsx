@@ -9,7 +9,7 @@ const Standard = () => {
                 <div>
                     <p className="eyebrow on-dark">Norsk standard</p>
                    <h2 className="h2">A new company, so everything <br/>is written down.</h2>
-                    <p className="lede on-dark">Norbil has no reviews yet, and we would rather show you the terms than invent five stars. Here is what the Norwegian half of the name is supposed to mean in practice.</p>
+                    <p className="lede on-dark">We would rather show you the terms than invent five stars. Here is what the Norwegian half of the name is supposed to mean in practice.</p>
                 </div>
 
                 <div className={styles.grid}>
@@ -30,7 +30,7 @@ const Standard = () => {
 
                     <div className={styles.item}>
                         <h3>Answers in your language</h3>
-                        <p>Montenegrin, English, Norwegian and Russian — from the people who own the cars.</p>
+                        <p>Montenegrin, English, Norwegian — from the people who own the cars.</p>
                     </div>
 
                 </div>
